@@ -287,7 +287,7 @@ Authorization: Bearer {세션키}
 | Status Code 성공 | `200 OK`           |
 | Status Code 실패 | `401 Unauthorized` |
 
-**Request Param**
+**Request Header**
 
 ```
 ?bearerToken=Bearer {세션키}
@@ -312,7 +312,7 @@ Authorization: Bearer {세션키}
 | 메서드                   | HTTP | URL               | 파라미터                           | 반환 타입        | Status Code |
 | ------------------------ | ---- | ----------------- | ---------------------------------- | ---------------- | ----------- |
 | `join(request)`          | POST | `/api/members`    | `@RequestBody MemberRequest`       | `MemberResponse` | 201         |
-| `getMyInfo(bearerToken)` | GET  | `/api/members/me` | `@RequestParam String bearerToken` | `MemberResponse` | 200         |
+| `getMyInfo(bearerToken)` | GET  | `/api/members/me` | `@RequestHeader("Authorization") String` | `MemberResponse` | 200         |
 
 ### `AuthController`
 
