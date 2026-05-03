@@ -290,7 +290,7 @@ Authorization: Bearer {세션키}
 **Request Header**
 
 ```
-?bearerToken=Bearer {세션키}
+Authorization: Bearer {세션키}
 ```
 
 **Response Body**
